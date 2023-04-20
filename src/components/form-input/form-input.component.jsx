@@ -1,5 +1,4 @@
-import "./form-input.styles.jsx";
-import { FormInputLabel, Group, Input } from "./form-input.styles.jsx";
+import { FormInputLabel, Input, Group } from './form-input.styles';
 
 const FormInput = ({ label, ...otherProps }) => {
   return (
