@@ -13,6 +13,8 @@ import {
   HeaderBlock,
   Total,
 } from "./checkout.styles";
+import PaymentForm from "../../components/payment-form/payment-form.component";
+import { AddressElement, CardCvcElement, CardElement } from "@stripe/react-stripe-js";
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
@@ -41,6 +43,7 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <Total>Total: ${cartTotal}</Total>
+      <PaymentForm />
     </CheckoutContainer>
   );
 };
